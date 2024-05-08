@@ -1,0 +1,24 @@
+<%- include("partials/header1.ejs") %>
+<body class="bloodbridgebody">
+  <div class="main">
+    <input type="checkbox" id="chk" aria-hidden="true" />
+
+    <div class="signup">
+      <form action="/register" method="POST">
+        <label class="logreglabel" for="chk" aria-hidden="true">Sign up</label>
+        <input class="logreginput" type="email" name="email" placeholder="Email" required="" />
+        <input class="logreginput" type="password" name="pswd" placeholder="Password" required="" />
+        <button class="logregbutton">Sign up</button>
+      </form>
+    </div>
+
+    <div class="login">
+      <form action="/login" method="POST">
+        <label class="logreglabel" for="chk" aria-hidden="true">Login</label>
+        <input class="logreginput" type="email" name="email" placeholder="Email" required="" />
+        <input class="logreginput" type="password" name="pswd" placeholder="Password" required="" />
+        <button class="logregbutton">Login</button>
+      </form>
+    </div>
+  </div>
+</body>

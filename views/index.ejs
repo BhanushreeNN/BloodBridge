@@ -1,0 +1,53 @@
+<%- include("partials/header.ejs") %>
+<body>
+  <section>
+    <div class="home">
+      <div class="containerhome">
+        <div class="row">
+          <div class="col-sm-7">
+            <h6>Donate Blood, Give the Gift of Life!</h6>
+            <h5>Become a Life Giver!</h5>
+            <p>
+              In a world where heroes come in all forms, you have the power to
+              unleash the hero within you, By answering the call to donate
+              blood, you can become a true life-giver. Your selfless act holds
+              the extraordinary ability to save lives, restore hope, and bring
+              solace to those in need.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var nav = document.querySelector("nav");
+      window.addEventListener("scroll", function () {
+        if (window.pageYOffset > 100) {
+          nav.classList.add("bg-dark", "shadow");
+        } else {
+          nav.classList.remove("bg-dark", "shadow");
+        }
+      });
+    </script>
+  </section>
+  <section class="compatibility">
+    <div class="compContainer">
+      <div>
+        <img
+          src="images/bloodchart.png"
+          alt="compatibility"
+          class="center-image"
+        />
+      </div>
+      <div class="video">
+        <iframe
+          width="600"
+          height="602"
+          src="https://www.youtube.com/embed/B6dAPXpUjCE"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </section>
+</body>

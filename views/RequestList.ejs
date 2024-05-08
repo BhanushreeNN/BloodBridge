@@ -1,0 +1,26 @@
+<%- include("partials/header.ejs") %>
+<div class="heading">
+    <h1><%= heading %></h1>
+</div>
+<div class="reqlist">
+    <% for (let i = 0; i<request_arr.length; i++){ %>
+    <div class="containerbox">
+        <div class="box">
+            <div class="icon"><%= i+1 %></div>
+            <div class="content">
+                <h3><%= request_arr[i].first_name %> <%= request_arr[i].last_name %></h3>
+                <p><%= request_arr[i].email %></p>
+                <p><%= request_arr[i].ph_no %></p>
+                <p><%= request_arr[i].units %> units</p>
+                <p><%= request_arr[i].reason %></p>
+                <p><%= request_arr[i].address %>, <%= request_arr[i].district %>, <%= request_arr[i].states %> </p>
+                <form method="post" action="/selectRequest">
+                    <input type="hidden" name="requestId" value="<%= request_arr[i].request_id %>">
+                    <button class="button" type="submit">DONATE</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+    <% }%>    
+</div>
+
